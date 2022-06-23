@@ -1,7 +1,5 @@
 package com.br.pdv.app.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class CadastroProduto {
 	private String nome;
@@ -9,51 +7,43 @@ public abstract class CadastroProduto {
 	private long quantidade;
 	private String categoria;
 	private Double valor;
-	private List<CadastroProduto> listaProdutos = new ArrayList<CadastroProduto>();
-	
-	protected CadastroProduto(String nome, String codigo, long quantidade, String categoria, Double valor, List<CadastroProduto> listaProdutos) {
+
+	public CadastroProduto(String nome, String codigo, long quantidade, String categoria, Double valor) {
 		super();
 		this.nome = nome;
 		this.codigo = codigo;
 		this.quantidade = quantidade;
 		this.categoria = categoria;
 		this.valor = valor;
-		this.listaProdutos = listaProdutos;
 	}
-	protected String getNome() {
+	public String getNome() {
 		return nome;
 	}
-	protected void setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	protected String getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
-	protected void setCodigo(String codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
-	protected long getQuantidade() {
+	public long getQuantidade() {
 		return quantidade;
 	}
-	protected void setQuantidade(long quantidade) {
+	public void setQuantidade(long quantidade) {
 		this.quantidade = quantidade;
 	}
-	protected String getCategoria() {
+	public String getCategoria() {
 		return categoria;
 	}
-	protected void setCategoria(String categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	protected Double getValor() {
+	public Double getValor() {
 		return valor;
 	}
-	protected void setValor(Double valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
-	}
-	protected List<CadastroProduto> getListaProdutos() {
-		return listaProdutos;
-	}
-	protected void setListaProdutos(List<CadastroProduto> listaProdutos) {
-		this.listaProdutos = listaProdutos;
 	}
 }
